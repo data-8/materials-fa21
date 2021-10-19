@@ -1,8 +1,14 @@
 test = {   'name': 'q2_8',
     'points': None,
-    'suites': [   {   'cases': [   {'code': '>>> len(differences)\n5000', 'hidden': False, 'locked': False},
-                                   {'code': '>>> abs(np.average(differences)) < 0.05 # On average, your test statistic should be close to 0\nTrue', 'hidden': False, 'locked': False},
-                                   {'code': '>>> all(differences == differences.item(0)) == False # Make sure all of the test statistics are different\nTrue', 'hidden': False, 'locked': False}],
+    'suites': [   {   'cases': [   {   'code': '>>> test_stat = round(simulate_and_test_statistic(bakers, "won", "star baker awards"), 3)\n>>> -2 < test_stat < 2\nTrue',
+                                       'hidden': False,
+                                       'locked': False},
+                                   {   'code': '>>> np.random.seed(1)\n'
+                                               '>>> test_stat2 = simulate_and_test_statistic(bakers, "won", "star baker awards")\n'
+                                               '>>> np.round(test_stat2, 3) == -0.023 or np.round(test_stat2, 3) == -0.132\n'
+                                               'True',
+                                       'hidden': False,
+                                       'locked': False}],
                       'scored': True,
                       'setup': '',
                       'teardown': '',

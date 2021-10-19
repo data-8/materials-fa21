@@ -1,6 +1,7 @@
 test = {   'name': 'q2_6',
     'points': None,
-    'suites': [   {   'cases': [{'code': '>>> np.isclose(round(find_test_stat(bakers, "won", "star baker awards"), 3) - 0.848, 0)\nTrue', 'hidden': False, 'locked': False}],
+    'suites': [   {   'cases': [   {'code': '>>> isinstance(observed_difference, float)\nTrue', 'hidden': False, 'locked': False},
+                                   {'code': '>>> float(round(observed_difference, 3))\n0.848', 'hidden': False, 'locked': False}],
                       'scored': True,
                       'setup': '',
                       'teardown': '',
